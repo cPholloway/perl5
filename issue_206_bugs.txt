@@ -1,0 +1,2 @@
+t/lib/common.pl -- die die
+#  60 chdir $tempdir or die die "Can't chdir '$tempdir': $!";

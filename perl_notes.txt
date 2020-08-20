@@ -1,0 +1,17 @@
+> 1. Start off with the standard guide to working on the Perl core
+> distribution: 'perldoc perlhack'.  It's right there at your command-line
+> or at a variety of places on the web. 
+
+perldoc perlhack
+perldoc pod/perlhack.pod
+TEST:
+    % ./Configure -des -Dusedevel && make test_prep
+    % ./Configure -des -Dusedevel -Dusethreads && make test_prep
+    % make test
+    % make test_harness
+
+> 2. Next, read this gist:
+> "How Do I Get Started with the Perl Core Distribution?"
+>   https://gist.github.com/jkeenan/2eabfac32bfc396ceb8e6240f5a2adf8
+
+POTENTIAL TICKET:  https://github.com/atoomic/perl/issues/206

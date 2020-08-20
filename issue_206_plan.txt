@@ -1,0 +1,247 @@
+https://github.com/atoomic/perl/issues/206
+
+* (/) Execute the test suite against 5.32
+** NOTES
+*** non-threaded
+{code}
+Failed 2 tests out of 2478, 99.92% okay.
+    porting/authors.t
+    porting/manifest.t
+{code}
+*** threaded
+{code}
+porting/authors.t                                                (Wstat: 0 Tests: 1052 Failed: 1)
+  Failed test:  964
+porting/manifest.t                                               (Wstat: 0 Tests: 10565 Failed: 3)
+  Failed tests:  10560, 10562-10563
+../cpan/File-Path/t/Path_root.t                                  (Wstat: 134 Tests: 0 Failed: 0)
+  Non-zero wait status: 134
+  Parse errors: Bad plan.  You planned 11 tests but ran 0.
+Files=2679, Tests=1222502, 826 wallclock secs (54.10 usr  6.47 sys + 434.24 cusr 43.26 csys = 538.07 CPU)
+Result: FAIL
+{code}
+* (/) Execute the test suite against 'alpha-dev-02-strict'
+** Non threaded
+{code}
+Test Summary Report
+-------------------
+run/switches.t                                                   (Wstat: 0 Tests: 137 Failed: 1)
+  Failed test:  27
+op/coreamp.t                                                     (Wstat: 32512 Tests: 87 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: No plan found in TAP output
+op/dbm.t                                                         (Wstat: 32512 Tests: 4 Failed: 2)
+  Failed tests:  1-2
+  Non-zero exit status: 127
+  Parse errors: Bad plan.  You planned 5 tests but ran 4.
+../cpan/autodie/t/dbmopen.t                                      (Wstat: 32512 Tests: 0 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: Bad plan.  You planned 9 tests but ran 0.
+../cpan/Memoize/t/errors.t                                       (Wstat: 32512 Tests: 6 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: Bad plan.  You planned 11 tests but ran 6.
+../cpan/Module-Metadata/t/extract-version.t                      (Wstat: 0 Tests: 224 Failed: 0)
+  TODO passed:   204
+../dist/Data-Dumper/t/bless.t                                    (Wstat: 1024 Tests: 11 Failed: 4)
+  Failed tests:  3, 5, 8, 10
+  Non-zero exit status: 4
+../dist/Data-Dumper/t/dumper.t                                   (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: No plan found in TAP output
+../dist/Data-Dumper/t/qr.t                                       (Wstat: 512 Tests: 2 Failed: 2)
+  Failed tests:  1-2
+  Non-zero exit status: 2
+../dist/Storable/t/recurse.t                                     (Wstat: 1536 Tests: 39 Failed: 6)
+  Failed tests:  14-15, 17, 20-21, 37
+  Non-zero exit status: 6
+../dist/Storable/t/store.t                                       (Wstat: 6400 Tests: 7 Failed: 0)
+  Non-zero exit status: 25
+  Parse errors: Bad plan.  You planned 25 tests but ran 7.
+../dist/Storable/t/tied.t                                        (Wstat: 768 Tests: 25 Failed: 3)
+  Failed tests:  17, 19, 22
+  Non-zero exit status: 3
+../ext/B/t/concise.t                                             (Wstat: 0 Tests: 167 Failed: 2)
+  Failed tests:  4, 159
+../ext/B/t/optree_check.t                                        (Wstat: 0 Tests: 35 Failed: 3)
+  Failed tests:  28, 30, 33
+../ext/B/t/optree_concise.t                                      (Wstat: 0 Tests: 41 Failed: 9)
+  Failed tests:  3, 5, 8, 10, 12, 14, 33, 39, 41
+../ext/B/t/optree_constants.t                                    (Wstat: 0 Tests: 99 Failed: 2)
+  Failed tests:  89, 97
+../ext/B/t/optree_misc.t                                         (Wstat: 0 Tests: 18 Failed: 8)
+  Failed tests:  2, 4, 8, 10, 12, 14, 16, 18
+../ext/B/t/optree_samples.t                                      (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+../ext/B/t/optree_sort.t                                         (Wstat: 0 Tests: 21 Failed: 6)
+  Failed tests:  3, 7, 11, 15, 19, 21
+../ext/B/t/optree_specials.t                                     (Wstat: 0 Tests: 15 Failed: 3)
+  Failed tests:  3, 13, 15
+../ext/B/t/optree_varinit.t                                      (Wstat: 0 Tests: 42 Failed: 10)
+  Failed tests:  3, 5, 7, 9, 18, 20, 22, 30, 32, 34
+../ext/Devel-Peek/t/Peek.t                                       (Wstat: 6400 Tests: 66 Failed: 0)
+  Non-zero exit status: 25
+  Parse errors: No plan found in TAP output
+../ext/NDBM_File/t/ndbm.t                                        (Wstat: 32512 Tests: 2 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: No plan found in TAP output
+../ext/ODBM_File/t/odbm.t                                        (Wstat: 32512 Tests: 2 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: No plan found in TAP output
+../lib/AnyDBM_File.t                                             (Wstat: 32512 Tests: 0 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: Bad plan.  You planned 12 tests but ran 0.
+../lib/charnames.t                                               (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: No plan found in TAP output
+../lib/DBM_Filter/t/01error.t                                    (Wstat: 32512 Tests: 3 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: Bad plan.  You planned 21 tests but ran 3.
+../lib/perl5db.t                                                 (Wstat: 0 Tests: 130 Failed: 7)
+  Failed tests:  44-45, 95, 124-127
+../lib/sigtrap.t                                                 (Wstat: 0 Tests: 16 Failed: 1)
+  Failed test:  13
+../lib/strict.t                                                  (Wstat: 0 Tests: 142 Failed: 27)
+  Failed tests:  1, 16-17, 22-24, 38-39, 55-57, 76, 85-86
+                88-89, 99-104, 122, 132-135
+../lib/vars.t                                                    (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: No plan found in TAP output
+../lib/vmsish.t                                                  (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 29 tests but ran 0.
+Files=2680, Tests=1185055, 1090 wallclock secs (113.84 usr  9.43 sys + 625.76 cusr 61.72 csys = 810.75 CPU)
+Result: FAIL
+{code}
+** Threaded
+{code}
+Test Summary Report
+-------------------
+run/switches.t                                                   (Wstat: 0 Tests: 137 Failed: 1)
+  Failed test:  27
+op/coreamp.t                                                     (Wstat: 32512 Tests: 87 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: No plan found in TAP output
+op/dbm.t                                                         (Wstat: 32512 Tests: 4 Failed: 2)
+  Failed tests:  1-2
+  Non-zero exit status: 127
+  Parse errors: Bad plan.  You planned 5 tests but ran 4.
+../cpan/autodie/t/dbmopen.t                                      (Wstat: 32512 Tests: 0 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: Bad plan.  You planned 9 tests but ran 0.
+../cpan/File-Path/t/Path_root.t                                  (Wstat: 134 Tests: 0 Failed: 0)
+  Non-zero wait status: 134
+  Parse errors: Bad plan.  You planned 11 tests but ran 0.
+../cpan/Memoize/t/errors.t                                       (Wstat: 32512 Tests: 6 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: Bad plan.  You planned 11 tests but ran 6.
+../cpan/Module-Metadata/t/extract-version.t                      (Wstat: 0 Tests: 224 Failed: 0)
+  TODO passed:   204
+../dist/Data-Dumper/t/bless.t                                    (Wstat: 1024 Tests: 11 Failed: 4)
+  Failed tests:  3, 5, 8, 10
+  Non-zero exit status: 4
+../dist/Data-Dumper/t/dumper.t                                   (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: No plan found in TAP output
+../dist/Data-Dumper/t/qr.t                                       (Wstat: 512 Tests: 2 Failed: 2)
+  Failed tests:  1-2
+  Non-zero exit status: 2
+../dist/Storable/t/recurse.t                                     (Wstat: 1536 Tests: 39 Failed: 6)
+  Failed tests:  14-15, 17, 20-21, 37
+  Non-zero exit status: 6
+../dist/Storable/t/store.t                                       (Wstat: 6400 Tests: 7 Failed: 0)
+  Non-zero exit status: 25
+  Parse errors: Bad plan.  You planned 25 tests but ran 7.
+../dist/Storable/t/tied.t                                        (Wstat: 768 Tests: 25 Failed: 3)
+  Failed tests:  17, 19, 22
+  Non-zero exit status: 3
+../ext/B/t/concise.t                                             (Wstat: 0 Tests: 167 Failed: 2)
+  Failed tests:  4, 159
+../ext/B/t/optree_check.t                                        (Wstat: 0 Tests: 35 Failed: 3)
+  Failed tests:  28, 30, 33
+../ext/B/t/optree_concise.t                                      (Wstat: 0 Tests: 41 Failed: 9)
+  Failed tests:  3, 5, 8, 10, 12, 14, 33, 39, 41
+../ext/B/t/optree_constants.t                                    (Wstat: 0 Tests: 99 Failed: 2)
+  Failed tests:  89, 97
+../ext/B/t/optree_misc.t                                         (Wstat: 0 Tests: 18 Failed: 8)
+  Failed tests:  2, 4, 8, 10, 12, 14, 16, 18
+../ext/B/t/optree_samples.t                                      (Wstat: 512 Tests: 0 Failed: 0)
+  Non-zero exit status: 2
+  Parse errors: No plan found in TAP output
+../ext/B/t/optree_sort.t                                         (Wstat: 0 Tests: 21 Failed: 6)
+  Failed tests:  3, 7, 11, 15, 19, 21
+../ext/B/t/optree_specials.t                                     (Wstat: 0 Tests: 15 Failed: 3)
+  Failed tests:  3, 13, 15
+../ext/B/t/optree_varinit.t                                      (Wstat: 0 Tests: 42 Failed: 10)
+  Failed tests:  3, 5, 7, 9, 18, 20, 22, 30, 32, 34
+../ext/Devel-Peek/t/Peek.t                                       (Wstat: 6400 Tests: 66 Failed: 0)
+  Non-zero exit status: 25
+  Parse errors: No plan found in TAP output
+../ext/NDBM_File/t/ndbm.t                                        (Wstat: 32512 Tests: 2 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: No plan found in TAP output
+../ext/ODBM_File/t/odbm.t                                        (Wstat: 32512 Tests: 2 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: No plan found in TAP output
+../lib/AnyDBM_File.t                                             (Wstat: 32512 Tests: 0 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: Bad plan.  You planned 12 tests but ran 0.
+../lib/charnames.t                                               (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: No plan found in TAP output
+../lib/DB-small.t                                                (Wstat: 256 Tests: 14 Failed: 1)
+  Failed test:  11
+  Non-zero exit status: 1
+../lib/DBM_Filter/t/01error.t                                    (Wstat: 32512 Tests: 3 Failed: 0)
+  Non-zero exit status: 127
+  Parse errors: Bad plan.  You planned 21 tests but ran 3.
+../lib/perl5db.t                                                 (Wstat: 0 Tests: 133 Failed: 7)
+  Failed tests:  44-45, 95, 124-127
+../lib/sigtrap.t                                                 (Wstat: 0 Tests: 16 Failed: 1)
+  Failed test:  13
+../lib/strict.t                                                  (Wstat: 0 Tests: 142 Failed: 27)
+  Failed tests:  1, 16-17, 22-24, 38-39, 55-57, 76, 85-86
+                88-89, 99-104, 122, 132-135
+../lib/vars.t                                                    (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: No plan found in TAP output
+../lib/vmsish.t                                                  (Wstat: 65280 Tests: 0 Failed: 0)
+  Non-zero exit status: 255
+  Parse errors: Bad plan.  You planned 29 tests but ran 0.
+Files=2680, Tests=1196649, 822 wallclock secs (56.68 usr  6.72 sys + 433.62 cusr 43.88 csys = 540.90 CPU)
+Result: FAIL
+{code}
+* (/) compare the two (are my tests currently passing?)
+** My tests are currently passing
+* (/) Execute individual tests against 'alpha-dev-02-strict'
+
+* (/) SME on t/lib/common.pl
+* () SME on t/lib/commonsense.t
+* () SME on t/lib/croak.t
+* () SME on t/lib/cygwin.t
+* () SME on t/lib/dbmt_common.pl
+* () SME on t/lib/deprecate.t
+* () SME on t/lib/overload_fallback.t
+* () SME on t/lib/overload_nomethod.t
+* () SME on t/lib/proxy_constant_subs.t
+* () SME on t/lib/test_use.pm
+* () SME on t/lib/universal.t
+* () SME on t/loc_tools.pl
+
+* (/) compare diff between branches t/lib/common.pl
+* () compare diff between branches t/lib/commonsense.t
+* () compare diff between branches t/lib/croak.t
+* () compare diff between branches t/lib/cygwin.t
+* () compare diff between branches t/lib/dbmt_common.pl
+* () compare diff between branches t/lib/deprecate.t
+* () compare diff between branches t/lib/overload_fallback.t
+* () compare diff between branches t/lib/overload_nomethod.t
+* () compare diff between branches t/lib/proxy_constant_subs.t
+* () compare diff between branches t/lib/test_use.pm
+* () compare diff between branches t/lib/universal.t
+* () compare diff between branches t/loc_tools.pl
+
+* () Do the tests pass against workstation too?
+
+* () Update the issue on github
+* () Pick up another issue (create a new github account with your personal email)
